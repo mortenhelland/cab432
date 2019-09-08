@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import Geocode from "react-geocode";
  
 
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
  
+Geocode.setApiKey("AIzaSyCSaixeAEdTY4Ewi1wR_GjzoFBYhWn8LlU");
+
+
 class Maps extends Component {
+
+
+  
   render() {
     return (
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{key: ''}}
+          bootstrapURLKeys={{key: 'AIzaSyCSaixeAEdTY4Ewi1wR_GjzoFBYhWn8LlU'}}
           defaultCenter={{
-            lat: 59.95,
-            lng: 30.33
+            lat: 60.241755,
+            lng: 5.337844
           }}
           defaultZoom={11}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
+            lat={60.241755}
+            lng={5.337844}
+            text="My Home place"
           />
         </GoogleMapReact>
       </div>
